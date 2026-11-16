@@ -1,0 +1,61 @@
+---
+title: "Support Clean.World — Donate to Keep Cleaning Tools Free"
+description: "Donate to Clean.World to fund operations, outreach, contest prizes, community cleanups and hiring. One-time or monthly support, corporate matching and in-kind sponsorship."
+js: ["support.js"]
+permalink: "/support.html"
+---
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">💚 Support</span>
+      <h1>Keep Clean.World free for everyone</h1>
+      <p class="lead">Our tools, guides and cleanup kits are free. Your support pays for servers and data, outreach, contest prizes, cleanup supplies and the people who make it all.</p>
+      <div class="trust"><span>Transparent allocation</span><span>Cancel monthly anytime</span><span>Thank-you on our supporters wall (optional)</span></div>
+    </div>
+    <div class="card">
+      <h3 class="mt0">Where each dollar goes</h3>
+      <p class="small mb0">Operations &amp; data — 30%</p><div class="bar"><i style="width:30%"></i></div>
+      <p class="small mt2 mb0">Promotion &amp; marketing — 20%</p><div class="bar"><i style="width:20%"></i></div>
+      <p class="small mt2 mb0">Hiring writers, creators &amp; developers — 25%</p><div class="bar"><i style="width:25%"></i></div>
+      <p class="small mt2 mb0">Contests &amp; prizes — 15%</p><div class="bar"><i style="width:15%"></i></div>
+      <p class="small mt2 mb0">Cleanup supplies &amp; grants — 10%</p><div class="bar"><i style="width:10%"></i></div>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding-top:12px">
+  <div class="wrap">
+    <div class="g4">
+      <label class="card tier choice" style="padding:0"><input type="radio" name="amt" value="10"><span style="border:0"><span class="price">$10</span>Buys gloves &amp; bags for one volunteer cleanup crew</span></label>
+      <label class="card tier feat choice" style="padding:0"><input type="radio" name="amt" value="25" checked><span style="border:0"><span class="price">$25</span>Funds one month of live air-quality data &amp; hosting</span></label>
+      <label class="card tier choice" style="padding:0"><input type="radio" name="amt" value="50"><span style="border:0"><span class="price">$50</span>Pays for a new expert-tested guide</span></label>
+      <label class="card tier choice" style="padding:0"><input type="radio" name="amt" value="100"><span style="border:0"><span class="price">$100</span>Sponsors a monthly contest prize</span></label>
+    </div>
+    <div class="card mt2" id="donate">
+      <div class="split">
+        <div>
+          <h2 class="mt0" style="font-size:1.5rem">Make your gift</h2>
+          <div id="pay-btns" class="cta-row mt0"></div>
+          <p class="muted small" id="pay-note">Send us your pledge below and we'll reply with a secure payment link (card, PayPal or bank transfer) for the amount and frequency you choose.</p>
+          <ul class="small muted"><li>Clean.World is an independent website, not a registered charity — gifts are not tax-deductible unless stated on your receipt.</li><li>We publish a yearly summary of how support was spent.</li></ul>
+        </div>
+        <form data-form="Donation pledge" data-ok="Thank you for your generosity! We'll email your secure payment link and receipt shortly.">
+          <div class="row"><div class="field"><label for="d1">Amount (USD)</label><input id="d1" type="number" min="1" name="amount" value="25" required></div><div class="field"><label for="d2">Frequency</label><select id="d2" name="frequency"><option>One-time</option><option>Monthly</option><option>Yearly</option></select></div></div>
+          <div class="row"><div class="field"><label for="d3">Name</label><input id="d3" name="name" required></div><div class="field"><label for="d4">Email</label><input id="d4" type="email" name="email" required></div></div>
+          <div class="field"><label for="d5">Direct my gift to</label><select id="d5" name="allocation"><option>Where it's needed most</option><option>Operations &amp; data</option><option>Promotion &amp; marketing</option><option>Hiring talent</option><option>Contests &amp; prizes</option><option>Community cleanup grants</option></select></div>
+          <div class="field"><label for="d6">Message (optional)</label><input id="d6" name="message"></div>
+          <label class="check"><input type="checkbox" name="wall" value="Yes"> Show my first name on the supporters wall</label>
+          <div class="hp"><input name="_hp" tabindex="-1" autocomplete="off"></div>
+          <button class="btn btn-p mt2" type="submit">Pledge my support 💚</button>
+          <div class="form-msg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec alt">
+  <div class="wrap g3">
+    <div class="card"><div class="ico">🏢</div><h3>Corporate matching</h3><p class="muted">Many employers match staff donations. Ask HR, then tell us — we'll provide the paperwork.</p><a href="advertise.html#form">Corporate partnerships →</a></div>
+    <div class="card"><div class="ico">📦</div><h3>In-kind sponsorship</h3><p class="muted">Donate cleaning supplies, prizes, purifiers or cleanup gear. We'll credit your brand.</p><a href="advertise.html#form">Offer in-kind support →</a></div>
+    <div class="card"><div class="ico">📣</div><h3>Spread the word</h3><p class="muted">Free support counts too. Share a tool you love — it's the fastest way to grow the movement.</p><button class="btn btn-o btn-s" type="button" id="share-btn">Share Clean.World</button></div>
+  </div>
+</section>
