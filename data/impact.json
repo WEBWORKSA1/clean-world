@@ -1,0 +1,9 @@
+{
+ "_note": "Update these numbers by hand (or via the workflow) as real pledges, cleanup registrations and litter reports arrive by email. Never inflate them.",
+ "pledges": 0,
+ "cleanups": 0,
+ "kg": 0,
+ "countries": 0,
+ "goals": {"pledges": 10000, "cleanups": 500, "kg": 50000, "countries": 50},
+ "since": "2026-11-16"
+}
