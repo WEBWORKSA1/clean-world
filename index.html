@@ -1,0 +1,132 @@
+---
+title: "Clean.World — Cleaner Homes, Cleaner Air, Cleaner Planet"
+description: "Free expert cleaning guides, a cleaning cost calculator, stain wizard, live air-quality index for world cities, community cleanups — and free quotes from vetted local cleaning pros."
+js: ["airdata.js", "home.js"]
+permalink: "/index.html"
+---
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">🌍 The world's cleaning &amp; clean-living hub</span>
+      <h1>Cleaner homes. <span class="hl">Cleaner air.</span> A cleaner planet.</h1>
+      <p class="lead">Expert how-to guides, smart free tools and live air data — plus free, no-obligation quotes from vetted local cleaning pros when you'd rather not do it yourself.</p>
+      <div class="cta-row">
+        <a class="btn btn-p" href="quotes.html">Get 3 free cleaning quotes →</a>
+        <a class="btn btn-o" href="stains.html">Fix a stain now</a>
+      </div>
+      <div class="trust"><span>100% free for homeowners</span><span>No spam, no obligation</span><span>Homes &amp; businesses</span></div>
+    </div>
+    <div class="card" aria-labelledby="qq-h">
+      <h3 id="qq-h" class="mt0">Quick quote — 30 seconds</h3>
+      <form action="quotes.html" method="get">
+        <div class="field"><label for="qs">What needs cleaning?</label>
+          <select id="qs" name="service" required>
+            <option value="">Choose a service…</option>
+            <option>Regular house cleaning</option><option>Deep cleaning</option><option>Move-in / move-out cleaning</option>
+            <option>Office / commercial cleaning</option><option>Carpet &amp; upholstery cleaning</option><option>Window cleaning</option>
+            <option>Post-construction cleaning</option><option>Mold remediation</option><option>Air duct cleaning</option>
+            <option>Pressure washing</option><option>Junk removal</option><option>Disinfection / sanitization</option>
+          </select></div>
+        <div class="field"><label for="qz">ZIP / postal code</label><input id="qz" name="zip" placeholder="e.g. 10001 or H2X 1Y4" required></div>
+        <button class="btn btn-p" style="width:100%" type="submit">Compare prices →</button>
+        <p class="small muted mt2 mb0">Typical standard clean: <strong>$120–$280</strong> per visit. <a href="cost.html">Estimate yours</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:28px">
+  <div class="wrap">
+    <div class="card" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+      <span class="ico" style="margin:0">💡</span>
+      <div style="flex:1;min-width:240px"><strong>Clean tip of the day</strong><br><span class="muted" data-tip></span></div>
+      <a class="btn btn-o btn-s" href="routine.html">Build my routine</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-h"><div><h2>Free tools that do the thinking</h2><p>Built to answer the questions people search every day — instantly, on any device.</p></div></div>
+    <div class="g3">
+      <a class="card" href="cost.html"><div class="ico">🧮</div><h3>Cleaning Cost Calculator</h3><p class="muted mb0">Size, service, condition, extras and frequency → a realistic price range before you call anyone.</p></a>
+      <a class="card" href="stains.html"><div class="ico">🧴</div><h3>Stain Removal Wizard</h3><p class="muted mb0">Wine on carpet? Grease on cotton? 20+ stains × 6 surfaces with safe, step-by-step fixes.</p></a>
+      <a class="card" href="air.html"><div class="ico">🌬️</div><h3>Live Clean Air Index</h3><p class="muted mb0">Real-time US AQI and PM2.5 for 60+ world cities — cleanest and most polluted right now.</p></a>
+      <a class="card" href="routine.html"><div class="ico">🗓️</div><h3>Routine Builder</h3><p class="muted mb0">Tell us about your home, pets and time — get a printable daily, weekly and monthly checklist.</p></a>
+      <a class="card" href="recipes.html"><div class="ico">🍋</div><h3>Green Cleaner Recipes</h3><p class="muted mb0">Cheap, low-tox DIY formulas — and the chemical combinations you must never mix.</p></a>
+      <a class="card" href="cleanups.html"><div class="ico">🤝</div><h3>Cleanup Planner</h3><p class="muted mb0">Register a neighbourhood, beach or park cleanup and get a ready-to-use safety kit list.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sec-h"><div><h2>Air right now</h2><p>Live US AQI from Open-Meteo. Updated continuously — refresh any time.</p></div><a class="btn btn-o btn-s" href="air.html">Full world index →</a></div>
+    <div class="g2">
+      <div class="card"><h3 class="mt0">🌿 Cleanest cities now</h3><div id="clean-list"><div class="sk" style="height:140px"></div></div></div>
+      <div class="card"><h3 class="mt0">🏭 Most polluted cities now</h3><div id="dirty-list"><div class="sk" style="height:140px"></div></div></div>
+    </div>
+    <div class="card mt2" id="my-air">
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><strong>Your air quality</strong><button class="btn btn-p btn-s" id="geo-btn" type="button">📍 Check my location</button><span class="muted small" id="my-air-out">We only use your location in your browser to look up local air quality.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Hate cleaning? Compare pros near you.</h2>
+        <p>Tell us what you need once. We match you with up to three vetted, insured local cleaning companies who compete for your job — homes, rentals, offices, clinics, restaurants and construction sites.</p>
+        <ul style="margin:0;padding-left:1.1em;color:#eafff8"><li>Free and no obligation</li><li>Recurring cleans often cost 10–25% less per visit</li><li>Commercial contracts and one-off jobs</li></ul>
+      </div>
+      <div class="center"><a class="btn btn-l" href="quotes.html" style="font-size:1.1rem">Start my free quote →</a><p class="small mt2 mb0">Are you a cleaning business? <a href="pros.html" style="color:#fff;text-decoration:underline">Get customer leads</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h"><div><h2>Expert guides</h2><p>Original, tested, step-by-step — written for real homes, with safety first.</p></div><a class="btn btn-o btn-s" href="guides/index.html">All guides →</a></div>
+    <div class="g3">{%- assign guides = site.pages | where: "layout_guide", true | sort: "order" -%}{%- for g in guides limit: 6 -%}<a class="card" href="guides/{{ g.url | split: '/' | last }}"><span class="tag">{{ g.cat }}</span><h3 class="mt2">{{ g.title }}</h3><p class="muted small mb0">{{ g.description }}</p></a>{%- endfor -%}</div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sec-h"><div><h2>The Clean.World movement</h2><p>Every pledge, cleanup and shared tip adds up. Launched November 2026 — be one of the first making your street, beach and park cleaner.</p></div></div>
+    <div class="g4 center">
+      <div class="card"><div class="stat" data-impact="pledges" data-count="0">0</div><p class="muted mb0">Clean-living pledges<br><small>Goal: 10,000</small></p></div>
+      <div class="card"><div class="stat" data-impact="cleanups" data-count="0">0</div><p class="muted mb0">Cleanups registered<br><small>Goal: 500</small></p></div>
+      <div class="card"><div class="stat" data-impact="kg" data-count="0">0</div><p class="muted mb0">kg of litter reported<br><small>Goal: 50,000 kg</small></p></div>
+      <div class="card"><div class="stat" data-impact="countries" data-count="0">0</div><p class="muted mb0">Countries taking part<br><small>Goal: 50</small></p></div>
+    </div>
+    <div class="cta-row" style="justify-content:center"><a class="btn btn-p" href="cleanups.html">Take the pledge</a><a class="btn btn-o" href="contests.html">Enter this month's contest</a><a class="btn btn-o" href="support.html">Support our work</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h"><div><h2>Watch &amp; learn</h2><p>Hand-picked videos on deep cleaning, stains and the global cleanup effort.</p></div><a class="btn btn-o btn-s" href="videos.html">Video library →</a></div>
+    <div class="g3">
+      <div><div class="yt" data-id="JUQnhiZirKQ" data-title="The End of the Great Pacific Garbage Patch — The Ocean Cleanup"></div><p class="small muted">Ocean cleanup at scale</p></div>
+      <div><div class="yt" data-id="3XCmlDoSQfM" data-title="How to clean your oven with baking soda and vinegar"></div><p class="small muted">Oven deep clean, no harsh fumes</p></div>
+      <div><div class="yt" data-id="pXDx6DjNLDU" data-title="#TeamSeas launch video"></div><p class="small muted">#TeamSeas: creators vs. ocean trash</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sec-h"><div><h2>Latest clean-world news</h2><p>Recycling, pollution, cleanups and clean tech — refreshed automatically every day.</p></div><a class="btn btn-o btn-s" href="news.html">More news →</a></div>
+    <div class="g3" id="home-news"><div class="sk" style="height:110px"></div><div class="sk" style="height:110px"></div><div class="sk" style="height:110px"></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap g3">
+    <a class="card" href="advertise.html"><div class="ico">📣</div><h3>Advertise &amp; sponsor</h3><p class="muted mb0">Reach homeowners, facility managers and eco-minded families. Sponsor a tool, guide, contest or cleanup.</p></a>
+    <a class="card" href="careers.html"><div class="ico">🧑‍🤝‍🧑</div><h3>Join the team</h3><p class="muted mb0">Writers, video creators, local ambassadors and developers — remote, flexible, mission-driven.</p></a>
+    <a class="card" href="support.html"><div class="ico">💚</div><h3>Keep Clean.World free</h3><p class="muted mb0">Donations fund operations, outreach, contest prizes and new tools. Every dollar is accounted for.</p></a>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+---
+title: "Cleaning Guides — Expert How-Tos for Every Room"
+description: "Original, safety-first cleaning guides: ovens, kitchens, bathrooms, mould, carpets, move-out checklists, green cleaning, indoor air quality, hiring cleaners and organising community cleanups."
+permalink: "/guides/index.html"
+---
+<section class="hero" style="padding-bottom:26px">
+  <div class="wrap">
+    <span class="eyebrow">📘 Guides</span>
+    <h1>Cleaning guides that actually work</h1>
+    <p class="lead">Step-by-step, tested methods — with the why behind them and the safety notes most sites skip.</p>
+  </div>
+</section>
+<section class="sec" style="padding-top:10px">
+  <div class="wrap">
+    <div class="g3">{%- assign guides = site.pages | where: "layout_guide", true | sort: "order" -%}{%- for g in guides -%}<a class="card" href="{{ g.url | split: '/' | last }}"><span class="tag">{{ g.cat }}</span><h3 class="mt2">{{ g.title }}</h3><p class="muted small mb0">{{ g.description }}</p></a>{%- endfor -%}</div>
+    <div class="band mt3"><div><h2>Rather skip the scrubbing?</h2><p>Compare free quotes from vetted local cleaners — deep cleans, move-outs, carpets, offices and more.</p></div><div class="center"><a class="btn btn-l" href="../quotes.html">Get free quotes →</a></div></div>
+  </div>
+</section>
