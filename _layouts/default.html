@@ -1,0 +1,90 @@
+<!doctype html>
+{%- if page.url contains '/guides/' -%}{%- assign root = '../' -%}{%- else -%}{%- assign root = '' -%}{%- endif -%}
+{%- assign canon = page.url | replace: 'index.html', '' | prepend: site.url -%}
+{%- if page.title contains 'Clean.World' -%}{%- assign full_title = page.title -%}{%- else -%}{%- assign full_title = page.title | append: ' | Clean.World' -%}{%- endif -%}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+{%- if page.dynbase %}
+<script>(function(){var p=location.pathname;document.write('<base href="'+(p.indexOf('/clean-world/')===0?'/clean-world/':'/')+'">');})();</script>
+{%- endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ full_title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+<link rel="canonical" href="{{ canon }}">
+<meta name="robots" content="{{ page.robots | default: 'index,follow,max-image-preview:large' }}">
+<meta property="og:type" content="{% if page.type == 'article' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="Clean.World">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ canon }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f9d7a">
+<meta name="google-adsense-account" content="ca-pub-6620975821265271">
+<link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ root }}manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ root }}assets/css/site.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{%- if page.type == 'article' %}
+{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"datePublished":{{ page.date_published | default: '2026-11-16' | jsonify }},"dateModified":{{ page.date_published | default: '2026-11-16' | jsonify }},"author":{"@type":"Organization","name":"Clean.World Editorial Team"},"publisher":{"@type":"Organization","name":"Clean.World","logo":{"@type":"ImageObject","url":"https://clean.world/favicon.svg"}},"mainEntityOfPage":{{ canon | jsonify }}}
+{%- elsif page.url == '/' or page.url == '/index.html' %}
+{"@context":"https://schema.org","@type":"WebSite","name":"Clean.World","url":"https://clean.world/","description":{{ page.description | jsonify }}}
+{%- else %}
+{"@context":"https://schema.org","@type":"WebPage","name":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":{{ canon | jsonify }}}
+{%- endif %}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership <span>→</span></a></div>
+<header class="nav"><div class="wrap">
+<a class="logo" href="{{ root }}index.html" aria-label="Clean.World home"><svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f9d7a"/><stop offset="1" stop-color="#14b8c4"/></linearGradient></defs><circle cx="32" cy="32" r="30" fill="url(#lg)"/><path d="M20 35c6 9 18 9 24 0M18 26c4-8 24-8 28 0" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round"/><circle cx="46" cy="16" r="5" fill="#b6e94a"/></svg><span>Clean<b>.</b>World</span></a>
+<nav class="links" id="links" aria-label="Main"><a href="{{ root }}guides/index.html">Guides</a><div class="dd"><button type="button" aria-haspopup="true">Tools ▾</button><div class="dd-menu"><a href="{{ root }}cost.html">Cleaning Cost Calculator<small>Estimate any cleaning job in seconds</small></a><a href="{{ root }}stains.html">Stain Removal Wizard<small>Pick a stain + surface, get the fix</small></a><a href="{{ root }}routine.html">Cleaning Routine Builder<small>Printable daily / weekly / monthly plan</small></a><a href="{{ root }}air.html">Live Clean Air Index<small>Real-time air quality, world cities</small></a><a href="{{ root }}recipes.html">Green Cleaner Recipes<small>Safe DIY formulas + mixing rules</small></a></div></div><a href="{{ root }}cleanups.html">Cleanups</a><a href="{{ root }}videos.html">Videos</a><a href="{{ root }}news.html">News</a><a href="{{ root }}contests.html">Contests</a><a href="{{ root }}support.html">Support</a><a class="btn btn-p btn-s" href="{{ root }}quotes.html">Get free quotes</a></nav>
+<button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">🌙</button>
+<button class="icon-btn burger" aria-controls="links" aria-expanded="false" aria-label="Menu">☰</button>
+</div></header>
+<main id="main">
+{%- if page.layout_guide %}
+<section class="sec" style="padding-top:34px"><div class="wrap layout">
+<article class="article">
+<div class="crumbs"><a href="../index.html">Home</a> › <a href="index.html">Guides</a> › {{ page.cat }}</div>
+<h1>{{ page.title }}</h1>
+<p class="muted small">By the Clean.World Editorial Team · Updated {{ page.date_published | default: '2026-11-16' }} · {{ page.read | default: 8 }} min read</p>
+{{ content }}
+<div class="band mt3"><div><h2>Want it done for you?</h2><p>Compare free quotes from vetted local pros for {{ page.service | downcase }}.</p></div><div class="center"><a class="btn btn-l" href="../quotes.html?service={{ page.service | url_encode }}">Get free quotes →</a></div></div>
+</article>
+<aside class="side"><div class="card">
+<h3 class="mt0">Free tools</h3>
+<ul class="small"><li><a href="../cost.html">Cleaning Cost Calculator</a></li><li><a href="../stains.html">Stain Removal Wizard</a></li><li><a href="../routine.html">Routine Builder</a></li><li><a href="../air.html">Live Clean Air Index</a></li><li><a href="../recipes.html">Green Cleaner Recipes</a></li></ul>
+<hr style="border:0;border-top:1px solid var(--line)">
+<p class="small"><strong>Hiring help?</strong> Up to 3 free quotes, no obligation.</p>
+<a class="btn btn-p btn-s" href="../quotes.html?service={{ page.service | url_encode }}">Compare prices</a>
+</div></aside>
+</div></section>
+{%- assign guides = site.pages | where: "layout_guide", true | sort: "order" -%}
+<section class="sec alt"><div class="wrap"><h2>Keep reading</h2><div class="g3">
+{%- assign shown = 0 -%}
+{%- for g in guides -%}{%- if g.order > page.order and shown < 3 -%}{%- assign shown = shown | plus: 1 -%}
+<a class="card" href="{{ g.url | split: '/' | last }}"><span class="tag">{{ g.cat }}</span><h3 class="mt2">{{ g.title }}</h3><p class="muted small mb0">{{ g.description }}</p></a>
+{%- endif -%}{%- endfor -%}
+{%- for g in guides -%}{%- if g.order < page.order and shown < 3 -%}{%- assign shown = shown | plus: 1 -%}
+<a class="card" href="{{ g.url | split: '/' | last }}"><span class="tag">{{ g.cat }}</span><h3 class="mt2">{{ g.title }}</h3><p class="muted small mb0">{{ g.description }}</p></a>
+{%- endif -%}{%- endfor -%}
+</div></div></section>
+{%- else %}
+{{ content }}
+{%- endif %}
+</main>
+<footer class="foot" id="foot"><div class="wrap">
+<nav class="small" aria-label="Footer"><a href="{{ root }}about.html">About</a> · <a href="{{ root }}contact.html">Contact</a> · <a href="{{ root }}advertise.html">Advertise</a> · <a href="{{ root }}privacy.html">Privacy Policy</a> · <a href="{{ root }}terms.html">Terms</a> · <a href="{{ root }}disclaimer.html">Disclaimer &amp; Trademark</a></nav>
+<div class="legal">© <span data-year>2026</span> Clean.World — an independent website, not affiliated with any company, product, charity or trademark holder using “Clean World”, “CleanWorld” or similar names. Third-party marks belong to their owners. Cost figures are estimates, not offers.</div>
+</div></footer>
+<script src="{{ root }}assets/js/core.js"></script>
+{%- for j in page.js %}
+<script src="{{ root }}assets/js/{{ j }}"></script>
+{%- endfor %}
+</body>
+</html>

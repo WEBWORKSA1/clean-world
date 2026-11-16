@@ -1,0 +1,16 @@
+title: Clean.World
+description: Cleaner homes, cleaner air, cleaner planet.
+url: https://clean.world
+baseurl: ""
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - BUILD-PROMPT.md
+  - scripts
+  - automation
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+  - scope: { path: "guides" }
+    values: { layout: default }
