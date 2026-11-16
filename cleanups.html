@@ -1,0 +1,92 @@
+---
+title: "The Clean.World Cleanup Movement — Pledge, Register a Cleanup, Get the Kit"
+description: "Take the clean-living pledge, register a street, park, beach or river cleanup, download a safety kit checklist and report the litter you collect. Free and open to everyone, everywhere."
+permalink: "/cleanups.html"
+---
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">🤝 Community</span>
+      <h1>Clean your corner of the world</h1>
+      <p class="lead">One bag. One hour. One street. The Clean.World movement helps neighbours, schools, companies and clubs organise safe cleanups — and counts every kilogram.</p>
+      <div class="cta-row"><a class="btn btn-p" href="#pledge">Take the pledge</a><a class="btn btn-o" href="#register">Register a cleanup</a><a class="btn btn-o" href="#report">Report litter collected</a></div>
+    </div>
+    <div class="card">
+      <h3 class="mt0">Movement progress <span class="tag">since Nov 2026</span></h3>
+      <p class="mb0"><strong data-impact="pledges" data-count="0">0</strong> pledges <span class="muted small">/ 10,000 goal</span></p><div class="bar mb0"><i id="b-pl" style="width:0"></i></div>
+      <p class="mt2 mb0"><strong data-impact="cleanups" data-count="0">0</strong> cleanups <span class="muted small">/ 500 goal</span></p><div class="bar"><i id="b-cu" style="width:0"></i></div>
+      <p class="mt2 mb0"><strong data-impact="kg" data-count="0">0</strong> kg collected <span class="muted small">/ 50,000 goal</span></p><div class="bar"><i id="b-kg" style="width:0"></i></div>
+      <p class="small muted mt2 mb0">Counts are updated from verified submissions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pledge">
+  <div class="wrap split">
+    <div>
+      <h2>The Clean.World pledge</h2>
+      <ul class="checklist"><li>🌱 <span>I'll pick up litter I pass — at least five pieces on every walk.</span></li><li>♻️ <span>I'll refuse single-use plastic where I can and refill instead.</span></li><li>🧴 <span>I'll choose safer cleaning products and never pour chemicals down storm drains.</span></li><li>🌬️ <span>I'll protect indoor air: ventilate, filter, and skip unnecessary fragrances.</span></li><li>🤝 <span>I'll join or host at least one community cleanup this year.</span></li></ul>
+    </div>
+    <form class="card" data-form="Clean-living pledge" data-ok="Thank you — your pledge is counted! You'll get our monthly cleanup challenge by email.">
+      <h3 class="mt0">Sign the pledge</h3>
+      <div class="field"><label for="p1">First name</label><input id="p1" name="name" required></div>
+      <div class="field"><label for="p2">Email</label><input id="p2" type="email" name="email" required></div>
+      <div class="row"><div class="field"><label for="p3">City</label><input id="p3" name="city"></div><div class="field"><label for="p4">Country</label><input id="p4" name="country" required></div></div>
+      <label class="check"><input type="checkbox" name="updates" value="Yes"> Send me the monthly cleanup challenge</label>
+      <div class="hp"><input name="_hp" tabindex="-1" autocomplete="off"></div>
+      <button class="btn btn-p mt2" type="submit" onclick="try{localStorage.setItem('cw_pledged','true')}catch(e){}">I pledge ✓</button>
+      <div class="form-msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<section class="sec alt" id="register">
+  <div class="wrap split">
+    <form class="card" data-form="Cleanup registration" data-ok="Your cleanup is registered! We'll email a printable kit and may feature it on Clean.World.">
+      <h3 class="mt0">Register a cleanup</h3>
+      <div class="row"><div class="field"><label for="r1">Organiser name</label><input id="r1" name="name" required></div><div class="field"><label for="r2">Email</label><input id="r2" type="email" name="email" required></div></div>
+      <div class="row"><div class="field"><label for="r3">Group / organisation</label><input id="r3" name="company" placeholder="School, company, club…"></div><div class="field"><label for="r4">Type</label><select id="r4" name="cleanup_type"><option>Street / neighbourhood</option><option>Park / trail</option><option>Beach / coast</option><option>River / lake</option><option>School / campus</option><option>Corporate volunteer day</option></select></div></div>
+      <div class="row"><div class="field"><label for="r5">Date</label><input id="r5" type="date" name="date" required></div><div class="field"><label for="r6">Expected volunteers</label><input id="r6" type="number" min="1" name="volunteers" value="10"></div></div>
+      <div class="row"><div class="field"><label for="r7">Location (city, meeting point)</label><input id="r7" name="location" required></div><div class="field"><label for="r8">Country</label><input id="r8" name="country" required></div></div>
+      <label class="check"><input type="checkbox" name="public" value="Yes"> List it publicly so others can join</label>
+      <label class="check"><input type="checkbox" name="sponsor_help" value="Yes"> We'd like help finding a sponsor (bags, gloves, refreshments)</label>
+      <div class="hp"><input name="_hp" tabindex="-1" autocomplete="off"></div>
+      <button class="btn btn-p mt2" type="submit">Register cleanup</button>
+      <div class="form-msg" role="status"></div>
+    </form>
+    <div>
+      <h2>Cleanup safety kit</h2>
+      <ul class="checklist"><li>🧤 <span>Thick gloves for everyone + litter pickers</span></li><li>🗑️ <span>Separate bags: general waste and recyclables</span></li><li>🦺 <span>High-visibility vests near roads</span></li><li>🩹 <span>First-aid kit, water, sunscreen</span></li><li>⚠️ <span>Sharps rule: never touch needles or broken glass by hand — mark the spot and report to the local council</span></li><li>👧 <span>Adult supervision for under-18s; stay away from traffic, water edges and private land</span></li><li>📸 <span>Before/after photos + weigh your bags (bathroom scale works)</span></li><li>🚛 <span>Arrange pickup with your municipality before the day</span></li></ul>
+      <p class="small muted">Tip: share your before/after photos in this month's <a href="contests.html">Cleanup Crew contest</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="report">
+  <div class="wrap narrow">
+    <form class="card" data-form="Litter report" data-ok="Report received — thank you! Your kilograms will be added to the global counter after review.">
+      <h3 class="mt0">Report litter you collected</h3>
+      <div class="row"><div class="field"><label for="k1">Name / group</label><input id="k1" name="name" required></div><div class="field"><label for="k2">Email</label><input id="k2" type="email" name="email" required></div></div>
+      <div class="row"><div class="field"><label for="k3">Kilograms collected</label><input id="k3" type="number" min="0" step="0.1" name="kg" required></div><div class="field"><label for="k4">Bags filled</label><input id="k4" type="number" min="0" name="bags"></div></div>
+      <div class="row"><div class="field"><label for="k5">Where</label><input id="k5" name="location" required></div><div class="field"><label for="k6">Top item found</label><select id="k6" name="top_item"><option>Cigarette butts</option><option>Plastic bottles</option><option>Food wrappers</option><option>Cans</option><option>Bags</option><option>Takeaway cups / lids</option><option>Other</option></select></div></div>
+      <div class="field"><label for="k7">Photo link (optional)</label><input id="k7" type="url" name="photo_link" placeholder="Google Drive / Instagram / etc."></div>
+      <div class="hp"><input name="_hp" tabindex="-1" autocomplete="off"></div>
+      <button class="btn btn-p" type="submit">Submit report</button>
+      <div class="form-msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <h2>Inspiration: cleanups at global scale</h2>
+    <div class="g2">
+      <div><div class="yt" data-id="JUQnhiZirKQ" data-title="The End of the Great Pacific Garbage Patch — The Ocean Cleanup"></div><p class="small muted">The Ocean Cleanup's plan for the Great Pacific Garbage Patch.</p></div>
+      <div><div class="yt" data-id="cV2gBU6hKfY" data-title="#TeamSeas: cleaning the world's dirtiest beach"></div><p class="small muted">#TeamSeas — creators teaming up to remove ocean trash.</p></div>
+    </div>
+    <p class="small muted mt2">Videos are embedded from YouTube and remain the property of their creators. Clean.World is independent and not affiliated with the organisations shown.</p>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded',function(){CW.fetchJSON(CW.BASE+'data/impact.json',30).then(function(d){var g=d.goals||{};[['b-pl','pledges'],['b-cu','cleanups'],['b-kg','kg']].forEach(function(x){var e=document.getElementById(x[0]);if(e&&g[x[1]])e.style.width=Math.min(100,Math.max(1,(d[x[1]]||0)/g[x[1]]*100))+'%';});}).catch(function(){});});
+</script>

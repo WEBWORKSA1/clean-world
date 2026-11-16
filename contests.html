@@ -1,0 +1,63 @@
+---
+title: "Clean.World Contests & Prizes — Before/After, Cleanup Crew, Green Hacks"
+description: "Enter free monthly Clean.World contests: Before & After Transformation, Cleanup Crew of the Month, Green Cleaning Hack and Kids' Clean Planet Art. Prizes, featured spots and official rules."
+permalink: "/contests.html"
+---
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">🏆 Free to enter</span>
+    <h1>Clean up. Show off. Win.</h1>
+    <p class="lead">Monthly contests reward the most impressive transformations, the most dedicated cleanup crews and the smartest green hacks. No purchase necessary.</p>
+    <p><strong>Current round closes:</strong> <span id="ct-close"></span> · <span id="ct-left" class="tag g"></span></p>
+  </div>
+</section>
+<section class="sec" style="padding-top:10px">
+  <div class="wrap g2">
+    <div class="card"><div class="ico">✨</div><h3>Before &amp; After Transformation</h3><p class="muted">Your most satisfying room, appliance, garage or yard makeover. Judged on transformation, photo clarity and tips shared.</p><p><strong>Prize:</strong> $150 gift card + featured story</p></div>
+    <div class="card"><div class="ico">🤝</div><h3>Cleanup Crew of the Month</h3><p class="muted">Registered community cleanups compete on kilograms collected per volunteer, safety and story.</p><p><strong>Prize:</strong> $250 towards your next cleanup + crew spotlight</p></div>
+    <div class="card"><div class="ico">🍋</div><h3>Green Cleaning Hack</h3><p class="muted">Your best safe, low-waste cleaning trick. We test the finalists in our kitchen.</p><p><strong>Prize:</strong> $100 + your hack published with credit</p></div>
+    <div class="card"><div class="ico">🎨</div><h3>Kids' Clean Planet Art</h3><p class="muted">Ages 6–15: draw "the cleanest world you can imagine". Entered by a parent or guardian.</p><p><strong>Prize:</strong> art supplies bundle + gallery feature</p></div>
+  </div>
+</section>
+<section class="sec alt" id="enter">
+  <div class="wrap split">
+    <form class="card" data-form="Contest entry" data-ok="Your entry is in — good luck! Winners are announced on this page and notified by email.">
+      <h2 class="mt0" style="font-size:1.5rem">Enter now</h2>
+      <div class="field"><label for="e0">Contest</label><select id="e0" name="contest" required><option>Before &amp; After Transformation</option><option>Cleanup Crew of the Month</option><option>Green Cleaning Hack</option><option>Kids' Clean Planet Art (parent/guardian entry)</option></select></div>
+      <div class="row"><div class="field"><label for="e1">Full name</label><input id="e1" name="name" required></div><div class="field"><label for="e2">Email</label><input id="e2" type="email" name="email" required></div></div>
+      <div class="row"><div class="field"><label for="e3">Country</label><input id="e3" name="country" required></div><div class="field"><label for="e4">Social handle (optional)</label><input id="e4" name="social"></div></div>
+      <div class="field"><label for="e5">Link to photos / video</label><input id="e5" type="url" name="media_link" required placeholder="Google Drive, Dropbox, Instagram, YouTube…"></div>
+      <div class="field"><label for="e6">Tell us the story (what, how long, products, tips)</label><textarea id="e6" name="story" required></textarea></div>
+      <label class="check"><input type="checkbox" name="rules" value="Accepted" required> I am 18+ (or the parent/guardian of the entrant), I own the rights to this content, and I accept the official rules below.</label>
+      <div class="hp"><input name="_hp" tabindex="-1" autocomplete="off"></div>
+      <button class="btn btn-p mt2" type="submit">Submit entry</button>
+      <div class="form-msg" role="status"></div>
+    </form>
+    <div>
+      <h2>Sponsor a prize</h2>
+      <p>Put your brand in front of thousands of motivated cleaners and eco-minded families. Sponsors get logo placement on this page, in winner announcements and in the newsletter.</p>
+      <a class="btn btn-o" href="advertise.html#form">Become a contest sponsor</a>
+      <h3 class="mt3">Past winners</h3>
+      <p class="muted">Our first round runs now — winners will appear here.</p>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap narrow article" id="rules">
+    <h2 class="mt0">Official rules (summary)</h2>
+    <ol class="small">
+      <li><strong>No purchase necessary.</strong> A purchase or donation does not improve your chances of winning.</li>
+      <li><strong>Eligibility:</strong> open to individuals 18+ where contests are legal; minors may enter the Kids' Art contest only through a parent or guardian. Void where prohibited. Employees of Clean.World and sponsors are not eligible.</li>
+      <li><strong>Entry period:</strong> each round runs from the 1st to the last day of the calendar month (23:59 UTC). One entry per person per contest per round.</li>
+      <li><strong>Judging:</strong> a panel scores entries on the stated criteria (40% impact/transformation, 30% helpfulness of tips/story, 30% presentation). Decisions are final.</li>
+      <li><strong>Prizes:</strong> as described; non-transferable; no cash alternative except at our discretion. Winners are responsible for any taxes. Prizes may vary by country due to delivery restrictions.</li>
+      <li><strong>Content licence:</strong> by entering you grant Clean.World a non-exclusive, royalty-free licence to display your entry with credit. You keep ownership.</li>
+      <li><strong>Safety:</strong> entries showing unsafe practices (mixing chemicals, unsupervised minors at roadsides, handling sharps) are disqualified.</li>
+      <li><strong>Privacy:</strong> entrant data is handled under our <a href="privacy.html">Privacy Policy</a> and used only to run the contest and, if you opt in, our newsletter.</li>
+      <li>Winners are notified by email within 14 days of the round closing and must reply within 14 days or an alternate winner may be chosen.</li>
+    </ol>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded',function(){var n=new Date(),e=new Date(Date.UTC(n.getUTCFullYear(),n.getUTCMonth()+1,0,23,59));document.getElementById('ct-close').textContent=e.toLocaleDateString(undefined,{month:'long',day:'numeric',year:'numeric'});var d=Math.max(0,Math.ceil((e-n)/864e5));document.getElementById('ct-left').textContent=d+' day'+(d===1?'':'s')+' left';});
+</script>
