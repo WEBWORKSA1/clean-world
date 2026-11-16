@@ -1,0 +1,49 @@
+---
+title: "Live Clean Air Index — Cleanest & Most Polluted Cities Right Now"
+description: "Live air quality ranking for 64 world cities: US AQI, PM2.5, PM10, ozone and NO2, updated continuously. Check your own location's air and get health advice."
+js: ["airdata.js", "air.js"]
+permalink: "/air.html"
+---
+<section class="hero" style="padding-bottom:26px">
+  <div class="wrap">
+    <span class="eyebrow">🌬️ Live data</span>
+    <h1>Live Clean Air Index</h1>
+    <p class="lead">Which cities are breathing the cleanest air right now — and which are not? US AQI and pollutant levels for 64 world cities, with health advice.</p>
+    <div class="cta-row"><button class="btn btn-p" id="geo-btn" type="button">📍 Check air where I am</button><span class="muted small" id="my-air-out" style="align-self:center"></span></div>
+  </div>
+</section>
+<section class="sec" style="padding-top:12px">
+  <div class="wrap">
+    <div class="card" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
+      <label class="sr" for="aq-q">Search city or country</label><input id="aq-q" placeholder="Search city or country…" style="flex:1;min-width:200px">
+      <ul class="pill-list"><li><button type="button" class="on" data-sort="asc">🌿 Cleanest first</button></li><li><button type="button" data-sort="desc">🏭 Most polluted first</button></li></ul>
+    </div>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>#</th><th>City</th><th>US AQI</th><th>Level</th><th>PM2.5 µg/m³</th><th>PM10</th><th>O₃</th><th>NO₂</th></tr></thead>
+      <tbody id="aq-body"><tr><td colspan="8"><div class="sk" style="height:200px"></div></td></tr></tbody>
+    </table></div>
+    <p class="small muted mt2" id="aq-meta"></p>
+  </div>
+</section>
+<section class="sec alt">
+  <div class="wrap">
+    <h2>What the numbers mean</h2>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>US AQI</th><th>Level</th><th>What to do</th></tr></thead>
+      <tbody>
+        <tr><td><span class="aqi a1">0–50</span></td><td>Good</td><td>Open windows and air out your home.</td></tr>
+        <tr><td><span class="aqi a2">51–100</span></td><td>Moderate</td><td>Fine for most; very sensitive people should limit long, heavy exertion outdoors.</td></tr>
+        <tr><td><span class="aqi a3">101–150</span></td><td>Unhealthy for sensitive groups</td><td>Children, older adults, and people with asthma or heart disease should reduce time outdoors.</td></tr>
+        <tr><td><span class="aqi a4">151–200</span></td><td>Unhealthy</td><td>Everyone should limit outdoor exertion; close windows and run a HEPA purifier.</td></tr>
+        <tr><td><span class="aqi a5">201–300</span></td><td>Very unhealthy</td><td>Avoid outdoor activity; consider a well-fitted N95/FFP2 mask if you must go out.</td></tr>
+        <tr><td><span class="aqi a6">301+</span></td><td>Hazardous</td><td>Stay indoors with filtered air and follow local emergency guidance.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="g3 mt3">
+      <div class="card"><div class="ico">🪟</div><h3>Ventilate smartly</h3><p class="muted mb0">Air out when outdoor AQI is good; keep windows closed during pollution spikes and wildfire smoke.</p></div>
+      <div class="card"><div class="ico">🌀</div><h3>Filter indoors</h3><p class="muted mb0">A HEPA purifier sized for the room (check its CADR) and a MERV 11–13 HVAC filter cut indoor PM2.5 significantly.</p></div>
+      <div class="card"><div class="ico">🍳</div><h3>Cut indoor sources</h3><p class="muted mb0">Use the range hood, avoid candles and incense on bad days, and vacuum with a sealed HEPA vacuum. <a href="guides/indoor-air-quality.html">Full guide</a>.</p></div>
+    </div>
+    <p class="small muted mt3">Data: <a href="https://open-meteo.com/" rel="noopener" target="_blank">Open-Meteo Air Quality API</a> (CAMS model data, CC BY 4.0). Modelled values can differ from local monitoring stations; for official alerts, follow your local environmental agency.</p>
+  </div>
+</section>

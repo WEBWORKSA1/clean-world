@@ -1,0 +1,83 @@
+---
+title: "Cleaning Cost Calculator 2026 — House, Deep & Move-Out Cleaning Prices"
+description: "Free cleaning cost calculator: estimate standard, deep, move-out, Airbnb and post-construction cleaning prices by home size, condition, extras, frequency and region. Plus 2026 price tables."
+js: ["cost.js"]
+permalink: "/cost.html"
+---
+<section class="hero" style="padding-bottom:28px">
+  <div class="wrap">
+    <span class="eyebrow">🧮 Free calculator</span>
+    <h1>How much should cleaning cost?</h1>
+    <p class="lead">Get a realistic price range in seconds, based on 2026 US market rates. Then compare real quotes so you never overpay.</p>
+  </div>
+</section>
+<section class="sec" style="padding-top:16px">
+  <div class="wrap split">
+    <form class="card" id="calc" style="padding:26px" onsubmit="return false">
+      <div class="row">
+        <div class="field"><label for="c-svc">Type of clean</label><select id="c-svc"><option value="1">Standard / regular</option><option value="1.8">Deep clean</option><option value="2.1">Move-in / move-out</option><option value="0.9">Airbnb / rental turnover</option><option value="2.6">Post-construction</option></select></div>
+        <div class="field"><label for="c-size">Home size</label><select id="c-size"><option value="100">Studio (&lt;600 sq ft)</option><option value="120">1 bedroom</option><option value="150" selected>2 bedrooms</option><option value="190">3 bedrooms</option><option value="240">4 bedrooms</option><option value="300">5+ bedrooms</option></select></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="c-bath">Bathrooms</label><select id="c-bath"><option value="0">1</option><option value="25" selected>2</option><option value="50">3</option><option value="75">4+</option></select></div>
+        <div class="field"><label for="c-cond">Condition</label><select id="c-cond"><option value="0.9">Light — cleaned recently</option><option value="1" selected>Average</option><option value="1.25">Heavy — a few months</option><option value="1.5">Very heavy / hoarding / pets</option></select></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="c-freq">Frequency</label><select id="c-freq"><option value="1">One-time</option><option value="0.8">Weekly (−20%)</option><option value="0.85">Every 2 weeks (−15%)</option><option value="0.9">Monthly (−10%)</option></select></div>
+        <div class="field"><label for="c-reg">Area cost level</label><select id="c-reg"><option value="0.85">Lower-cost area / small town</option><option value="1" selected>Average city</option><option value="1.3">High-cost metro (NYC, SF, Boston…)</option></select></div>
+      </div>
+      <div class="field"><label>Extras</label>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" value="30" class="ex"><span>Inside oven <small class="muted">+$30</small></span></label>
+          <label class="choice"><input type="checkbox" value="30" class="ex"><span>Inside fridge <small class="muted">+$30</small></span></label>
+          <label class="choice"><input type="checkbox" value="45" class="ex"><span>Inside cabinets <small class="muted">+$45</small></span></label>
+          <label class="choice"><input type="checkbox" value="40" class="ex"><span>Interior windows <small class="muted">+$40</small></span></label>
+          <label class="choice"><input type="checkbox" value="35" class="ex"><span>Baseboards <small class="muted">+$35</small></span></label>
+          <label class="choice"><input type="checkbox" value="25" class="ex"><span>Laundry / beds <small class="muted">+$25</small></span></label>
+        </div></div>
+      <div class="field"><label for="c-carpet">Rooms of carpet shampoo (0–10)</label><input id="c-carpet" type="range" min="0" max="10" value="0"><span class="small muted" id="c-carpet-v">0 rooms</span></div>
+    </form>
+    <div>
+      <div class="result" aria-live="polite">
+        <p class="muted mb0">Estimated price per visit</p>
+        <div class="big" id="c-out">$—</div>
+        <p class="mb0"><span id="c-hours"></span></p>
+        <div class="meter mt2" aria-hidden="true"><b id="c-mark" style="left:30%"></b></div>
+        <p class="small muted mt2">Estimates use 2026 national ranges (standard $120–$280, deep $200–$500, move-out $250–$600, carpet $35–$75/room, $30–$75 per cleaner-hour). Real quotes vary by provider and region.</p>
+        <a class="btn btn-p" id="c-cta" href="quotes.html">Get real quotes for this job →</a>
+      </div>
+      <div class="card mt2"><h3 class="mt0">Ways to pay less</h3><ul class="small mb0"><li>Book recurring visits — 10–25% cheaper per visit.</li><li>Declutter first: cleaners bill for time spent moving things.</li><li>Bundle extras (oven + fridge) into one deep clean, then switch to standard.</li><li>Get 3 quotes — prices for the same job often differ by 30%+.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <h2>2026 cleaning price guide (US averages)</h2>
+    <p class="muted">Typical ranges compiled from published 2026 industry pricing surveys. Canada, UK and Australia run similar in local currency; high-cost metros can be 30–80% higher.</p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Service</th><th>Typical price</th><th>Usual pricing unit</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Standard house cleaning</td><td>$120–$280</td><td>per visit / $30–$75 per cleaner-hour</td><td>Recurring visits often 10–25% cheaper</td></tr>
+        <tr><td>Deep cleaning</td><td>$200–$500</td><td>per visit</td><td>Usually 50–100% more than a standard clean</td></tr>
+        <tr><td>Move-in / move-out</td><td>$250–$600</td><td>per job</td><td>Empty home; inside appliances &amp; cabinets included</td></tr>
+        <tr><td>Post-construction</td><td>$400–$800+</td><td>per job or per sq ft</td><td>Fine dust removal, multiple passes</td></tr>
+        <tr><td>Carpet cleaning</td><td>$35–$75</td><td>per room</td><td>Stain/pet treatment extra</td></tr>
+        <tr><td>Office cleaning</td><td>$0.07–$0.20</td><td>per sq ft per visit</td><td>Contract pricing; frequency drives rate</td></tr>
+        <tr><td>Window cleaning</td><td>$5–$15</td><td>per pane</td><td>Upper floors &amp; screens extra</td></tr>
+        <tr><td>Air duct cleaning</td><td>$300–$700</td><td>per system</td><td>Beware ultra-cheap "$99 whole house" offers</td></tr>
+        <tr><td>Mold remediation</td><td>$500–$6,000</td><td>per job</td><td>Depends on area &amp; containment; test first</td></tr>
+        <tr><td>Pressure washing</td><td>$0.15–$0.75</td><td>per sq ft</td><td>Driveways, siding, decks</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted mt2">Figures are estimates for planning only and not offers. See our <a href="disclaimer.html">disclaimer</a>.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap narrow faq">
+    <h2>Cleaning cost FAQ</h2>
+    <details><summary>How long does a house cleaning take?</summary><p>A standard clean of a 2-bedroom home takes one cleaner about 2–3 hours. Deep cleans usually take 3–6+ hours and move-outs 4–8 hours, depending on condition.</p></details>
+    <details><summary>Should I tip my house cleaner?</summary><p>In the US, 10–20% is common for one-off jobs, or a holiday bonus of about one visit's cost for recurring cleaners. Check whether the company pays staff fairly — tips matter more when they don't.</p></details>
+    <details><summary>Why is deep cleaning so much more expensive?</summary><p>It covers what regular cleans skip: baseboards, vents, door frames, inside appliances, grout scrubbing and built-up grime — roughly double the labour.</p></details>
+  </div>
+</section>
